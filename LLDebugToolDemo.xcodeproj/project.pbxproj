@@ -17,8 +17,9 @@
 		1813584B2341B4FA0036FC61 /* LLWebViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584A2341B4FA0036FC61 /* LLWebViewConfig.m */; };
 		1813584E2341E7250036FC61 /* WKWebView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */; };
 		18135851234214AA0036FC61 /* WKWebViewDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */; };
-		1818C7BA2367465300B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7B92367465200B1548C /* ZipArchive.framework */; };
-		1818C7BC2367465600B1548C /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7B92367465200B1548C /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1818C7BF2367486900B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7BE2367486900B1548C /* ZipArchive.framework */; };
+		1818C7C02367486D00B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7BE2367486900B1548C /* ZipArchive.framework */; };
+		1818C7C12367486D00B1548C /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7BE2367486900B1548C /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1885B13A232E6F0C004F1735 /* LLOscillogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B139232E6F0C004F1735 /* LLOscillogramView.m */; };
 		1885B13D232E8D58004F1735 /* LLFpsOscillogramWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13C232E8D58004F1735 /* LLFpsOscillogramWindow.m */; };
 		1885B140232E8E12004F1735 /* LLFpsOscillogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13F232E8E12004F1735 /* LLFpsOscillogramViewController.m */; };
@@ -334,7 +335,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1818C7BC2367465600B1548C /* ZipArchive.framework in Embed Frameworks */,
+				1818C7C12367486D00B1548C /* ZipArchive.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +363,7 @@
 		1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Swizzling.m"; sourceTree = "<group>"; };
 		1813584F234214AA0036FC61 /* WKWebViewDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDelegateVC.h; sourceTree = "<group>"; };
 		18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDelegateVC.m; sourceTree = "<group>"; };
-		1818C7B92367465200B1548C /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
+		1818C7BE2367486900B1548C /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
 		1885B138232E6F0C004F1735 /* LLOscillogramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLOscillogramView.h; sourceTree = "<group>"; };
 		1885B139232E6F0C004F1735 /* LLOscillogramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLOscillogramView.m; sourceTree = "<group>"; };
 		1885B13B232E8D58004F1735 /* LLFpsOscillogramWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFpsOscillogramWindow.h; sourceTree = "<group>"; };
@@ -965,7 +966,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1818C7BA2367465300B1548C /* ZipArchive.framework in Frameworks */,
+				1818C7BF2367486900B1548C /* ZipArchive.framework in Frameworks */,
+				1818C7C02367486D00B1548C /* ZipArchive.framework in Frameworks */,
 				891414F82222A18000974B52 /* IOKit.framework in Frameworks */,
 				208678B3E17E2AAB3B0E945F /* libPods-LLDebugToolDemo.a in Frameworks */,
 			);
@@ -996,7 +998,7 @@
 		1818C7AC2367395F00B1548C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1818C7B92367465200B1548C /* ZipArchive.framework */,
+				1818C7BE2367486900B1548C /* ZipArchive.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
