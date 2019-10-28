@@ -28,7 +28,7 @@
 #import "LLConfig.h"
 #import "LLImageNameConfig.h"
 #import "LLUITableViewLongPressGestureRecognizerDelegate.h"
-#import "SSZipArchive.h"
+#import "ZipArchive/SSZipArchive.h"
 
 static NSString *const kSandboxCellID = @"LLSandboxCell";
 

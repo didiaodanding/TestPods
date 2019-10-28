@@ -42,7 +42,7 @@
 #import "LLMonkeyHelper.h"
 #import "LLMockHelper.h"
 #import "UIDevice+LL_Swizzling.h"
-#import "SSZipArchive.h"
+#import "ZipArchive/SSZipArchive.h"
 #import "LLANRHelper.h"
 #import "LLCrashCPPExceptionHelper.h"
 #import "LLDebugLogger.h"

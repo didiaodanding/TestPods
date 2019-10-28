@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "LFTestPods"
-  s.version             = "0.0.1"
+  s.version             = "0.0.2"
   s.summary             = "TestPods only for test."
   s.homepage            = "https://github.com/didiaodanding/TestPods.git"
   s.license             = "MIT"
@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
 #  s.source_files      = "NewLLDebugTool/**/*.{h,m,swift,c}"
   s.source_files	    = "NewLLDebugTool/**/*.{h,m,mm,c}"
   s.resources		    = "NewLLDebugTool/**/*.{xib,storyboard,bundle,js}"
+  s.vendored_frameworks = 'NewLLDebugTool/Frameworks/*.framework'
   #s.swift_version = "4.2"
 
   # s.xcconfig = {

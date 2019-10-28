@@ -17,23 +17,9 @@
 		1813584B2341B4FA0036FC61 /* LLWebViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584A2341B4FA0036FC61 /* LLWebViewConfig.m */; };
 		1813584E2341E7250036FC61 /* WKWebView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */; };
 		18135851234214AA0036FC61 /* WKWebViewDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */; };
-		1818C6892366DD8A00B1548C /* ll_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6632366DD8A00B1548C /* ll_crypt.c */; };
-		1818C68A2366DD8A00B1548C /* ll_unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6642366DD8A00B1548C /* ll_unzip.c */; };
-		1818C68B2366DD8A00B1548C /* ll_zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6652366DD8A00B1548C /* ll_zip.c */; };
-		1818C68C2366DD8A00B1548C /* ll_ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6672366DD8A00B1548C /* ll_ioapi.c */; };
-		1818C68D2366DD8A00B1548C /* ll_ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6692366DD8A00B1548C /* ll_ioapi_buf.c */; };
-		1818C68E2366DD8A00B1548C /* ll_ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C66D2366DD8A00B1548C /* ll_ioapi_mem.c */; };
-		1818C68F2366DD8A00B1548C /* ll_minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C66E2366DD8A00B1548C /* ll_minishared.c */; };
-		1818C6902366DD8A00B1548C /* ll_aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6742366DD8A00B1548C /* ll_aeskey.c */; };
-		1818C6912366DD8A00B1548C /* ll_hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6752366DD8A00B1548C /* ll_hmac.c */; };
-		1818C6922366DD8A00B1548C /* ll_aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6782366DD8A00B1548C /* ll_aescrypt.c */; };
-		1818C6932366DD8A00B1548C /* ll_fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6792366DD8A00B1548C /* ll_fileenc.c */; };
-		1818C6942366DD8A00B1548C /* ll_sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C67B2366DD8A00B1548C /* ll_sha1.c */; };
-		1818C6952366DD8A00B1548C /* ll_aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C67E2366DD8A00B1548C /* ll_aes_ni.c */; };
-		1818C6962366DD8A00B1548C /* ll_prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6802366DD8A00B1548C /* ll_prng.c */; };
-		1818C6972366DD8A00B1548C /* ll_pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6822366DD8A00B1548C /* ll_pwd2key.c */; };
-		1818C6982366DD8A00B1548C /* ll_aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6832366DD8A00B1548C /* ll_aestab.c */; };
-		1818C6992366DD8A00B1548C /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818C6882366DD8A00B1548C /* SSZipArchive.m */; };
+		1818C7AE236739B300B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7AD236739B300B1548C /* ZipArchive.framework */; };
+		1818C7AF23673B9A00B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7AD236739B300B1548C /* ZipArchive.framework */; };
+		1818C7B023673B9A00B1548C /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7AD236739B300B1548C /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1885B13A232E6F0C004F1735 /* LLOscillogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B139232E6F0C004F1735 /* LLOscillogramView.m */; };
 		1885B13D232E8D58004F1735 /* LLFpsOscillogramWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13C232E8D58004F1735 /* LLFpsOscillogramWindow.m */; };
 		1885B140232E8E12004F1735 /* LLFpsOscillogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13F232E8E12004F1735 /* LLFpsOscillogramViewController.m */; };
@@ -342,6 +328,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1818C7B123673BAC00B1548C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1818C7B023673B9A00B1548C /* ZipArchive.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0857CAF55E62609DE772D43C /* Pods-LLDebugToolDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLDebugToolDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLDebugToolDemo/Pods-LLDebugToolDemo.release.xcconfig"; sourceTree = "<group>"; };
 		18135834234050C50036FC61 /* LLWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWebViewVC.h; sourceTree = "<group>"; };
@@ -363,44 +363,7 @@
 		1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Swizzling.m"; sourceTree = "<group>"; };
 		1813584F234214AA0036FC61 /* WKWebViewDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDelegateVC.h; sourceTree = "<group>"; };
 		18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDelegateVC.m; sourceTree = "<group>"; };
-		1818C6612366DD8A00B1548C /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
-		1818C6632366DD8A00B1548C /* ll_crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_crypt.c; sourceTree = "<group>"; };
-		1818C6642366DD8A00B1548C /* ll_unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_unzip.c; sourceTree = "<group>"; };
-		1818C6652366DD8A00B1548C /* ll_zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_zip.c; sourceTree = "<group>"; };
-		1818C6662366DD8A00B1548C /* ll_minishared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_minishared.h; sourceTree = "<group>"; };
-		1818C6672366DD8A00B1548C /* ll_ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_ioapi.c; sourceTree = "<group>"; };
-		1818C6682366DD8A00B1548C /* ll_ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_ioapi_mem.h; sourceTree = "<group>"; };
-		1818C6692366DD8A00B1548C /* ll_ioapi_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_ioapi_buf.c; sourceTree = "<group>"; };
-		1818C66A2366DD8A00B1548C /* ll_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_crypt.h; sourceTree = "<group>"; };
-		1818C66B2366DD8A00B1548C /* ll_zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_zip.h; sourceTree = "<group>"; };
-		1818C66C2366DD8A00B1548C /* ll_unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_unzip.h; sourceTree = "<group>"; };
-		1818C66D2366DD8A00B1548C /* ll_ioapi_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_ioapi_mem.c; sourceTree = "<group>"; };
-		1818C66E2366DD8A00B1548C /* ll_minishared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_minishared.c; sourceTree = "<group>"; };
-		1818C66F2366DD8A00B1548C /* ll_ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_ioapi.h; sourceTree = "<group>"; };
-		1818C6702366DD8A00B1548C /* ll_ioapi_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_ioapi_buf.h; sourceTree = "<group>"; };
-		1818C6722366DD8A00B1548C /* ll_prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_prng.h; sourceTree = "<group>"; };
-		1818C6732366DD8A00B1548C /* ll_aes_ni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_aes_ni.h; sourceTree = "<group>"; };
-		1818C6742366DD8A00B1548C /* ll_aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_aeskey.c; sourceTree = "<group>"; };
-		1818C6752366DD8A00B1548C /* ll_hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_hmac.c; sourceTree = "<group>"; };
-		1818C6762366DD8A00B1548C /* ll_aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_aestab.h; sourceTree = "<group>"; };
-		1818C6772366DD8A00B1548C /* ll_pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_pwd2key.h; sourceTree = "<group>"; };
-		1818C6782366DD8A00B1548C /* ll_aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_aescrypt.c; sourceTree = "<group>"; };
-		1818C6792366DD8A00B1548C /* ll_fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_fileenc.c; sourceTree = "<group>"; };
-		1818C67A2366DD8A00B1548C /* ll_aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_aesopt.h; sourceTree = "<group>"; };
-		1818C67B2366DD8A00B1548C /* ll_sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_sha1.c; sourceTree = "<group>"; };
-		1818C67C2366DD8A00B1548C /* ll_brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_brg_types.h; sourceTree = "<group>"; };
-		1818C67D2366DD8A00B1548C /* ll_hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_hmac.h; sourceTree = "<group>"; };
-		1818C67E2366DD8A00B1548C /* ll_aes_ni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_aes_ni.c; sourceTree = "<group>"; };
-		1818C67F2366DD8A00B1548C /* ll_brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_brg_endian.h; sourceTree = "<group>"; };
-		1818C6802366DD8A00B1548C /* ll_prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_prng.c; sourceTree = "<group>"; };
-		1818C6812366DD8A00B1548C /* ll_aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_aes.h; sourceTree = "<group>"; };
-		1818C6822366DD8A00B1548C /* ll_pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_pwd2key.c; sourceTree = "<group>"; };
-		1818C6832366DD8A00B1548C /* ll_aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ll_aestab.c; sourceTree = "<group>"; };
-		1818C6842366DD8A00B1548C /* ll_sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_sha1.h; sourceTree = "<group>"; };
-		1818C6852366DD8A00B1548C /* ll_fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ll_fileenc.h; sourceTree = "<group>"; };
-		1818C6862366DD8A00B1548C /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
-		1818C6872366DD8A00B1548C /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
-		1818C6882366DD8A00B1548C /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		1818C7AD236739B300B1548C /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
 		1885B138232E6F0C004F1735 /* LLOscillogramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLOscillogramView.h; sourceTree = "<group>"; };
 		1885B139232E6F0C004F1735 /* LLOscillogramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLOscillogramView.m; sourceTree = "<group>"; };
 		1885B13B232E8D58004F1735 /* LLFpsOscillogramWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFpsOscillogramWindow.h; sourceTree = "<group>"; };
@@ -1003,6 +966,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1818C7AE236739B300B1548C /* ZipArchive.framework in Frameworks */,
+				1818C7AF23673B9A00B1548C /* ZipArchive.framework in Frameworks */,
 				891414F82222A18000974B52 /* IOKit.framework in Frameworks */,
 				208678B3E17E2AAB3B0E945F /* libPods-LLDebugToolDemo.a in Frameworks */,
 			);
@@ -1030,65 +995,12 @@
 			path = Function;
 			sourceTree = "<group>";
 		};
-		1818C6602366DD8A00B1548C /* SSZipArchive */ = {
+		1818C7AC2367395F00B1548C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1818C6622366DD8A00B1548C /* minizip */,
-				1818C6612366DD8A00B1548C /* ZipArchive.h */,
-				1818C6862366DD8A00B1548C /* SSZipArchive.h */,
-				1818C6872366DD8A00B1548C /* SSZipCommon.h */,
-				1818C6882366DD8A00B1548C /* SSZipArchive.m */,
+				1818C7AD236739B300B1548C /* ZipArchive.framework */,
 			);
-			path = SSZipArchive;
-			sourceTree = "<group>";
-		};
-		1818C6622366DD8A00B1548C /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				1818C6632366DD8A00B1548C /* ll_crypt.c */,
-				1818C6642366DD8A00B1548C /* ll_unzip.c */,
-				1818C6652366DD8A00B1548C /* ll_zip.c */,
-				1818C6662366DD8A00B1548C /* ll_minishared.h */,
-				1818C6672366DD8A00B1548C /* ll_ioapi.c */,
-				1818C6682366DD8A00B1548C /* ll_ioapi_mem.h */,
-				1818C6692366DD8A00B1548C /* ll_ioapi_buf.c */,
-				1818C66A2366DD8A00B1548C /* ll_crypt.h */,
-				1818C66B2366DD8A00B1548C /* ll_zip.h */,
-				1818C66C2366DD8A00B1548C /* ll_unzip.h */,
-				1818C66D2366DD8A00B1548C /* ll_ioapi_mem.c */,
-				1818C66E2366DD8A00B1548C /* ll_minishared.c */,
-				1818C66F2366DD8A00B1548C /* ll_ioapi.h */,
-				1818C6702366DD8A00B1548C /* ll_ioapi_buf.h */,
-				1818C6712366DD8A00B1548C /* aes */,
-			);
-			path = minizip;
-			sourceTree = "<group>";
-		};
-		1818C6712366DD8A00B1548C /* aes */ = {
-			isa = PBXGroup;
-			children = (
-				1818C6722366DD8A00B1548C /* ll_prng.h */,
-				1818C6732366DD8A00B1548C /* ll_aes_ni.h */,
-				1818C6742366DD8A00B1548C /* ll_aeskey.c */,
-				1818C6752366DD8A00B1548C /* ll_hmac.c */,
-				1818C6762366DD8A00B1548C /* ll_aestab.h */,
-				1818C6772366DD8A00B1548C /* ll_pwd2key.h */,
-				1818C6782366DD8A00B1548C /* ll_aescrypt.c */,
-				1818C6792366DD8A00B1548C /* ll_fileenc.c */,
-				1818C67A2366DD8A00B1548C /* ll_aesopt.h */,
-				1818C67B2366DD8A00B1548C /* ll_sha1.c */,
-				1818C67C2366DD8A00B1548C /* ll_brg_types.h */,
-				1818C67D2366DD8A00B1548C /* ll_hmac.h */,
-				1818C67E2366DD8A00B1548C /* ll_aes_ni.c */,
-				1818C67F2366DD8A00B1548C /* ll_brg_endian.h */,
-				1818C6802366DD8A00B1548C /* ll_prng.c */,
-				1818C6812366DD8A00B1548C /* ll_aes.h */,
-				1818C6822366DD8A00B1548C /* ll_pwd2key.c */,
-				1818C6832366DD8A00B1548C /* ll_aestab.c */,
-				1818C6842366DD8A00B1548C /* ll_sha1.h */,
-				1818C6852366DD8A00B1548C /* ll_fileenc.h */,
-			);
-			path = aes;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		1885B1472331E71F004F1735 /* GHUnit */ = {
@@ -1985,7 +1897,7 @@
 		C44F40542152AA7000153F46 /* NewLLDebugTool */ = {
 			isa = PBXGroup;
 			children = (
-				1818C6602366DD8A00B1548C /* SSZipArchive */,
+				1818C7AC2367395F00B1548C /* Frameworks */,
 				18BCA2F72361E1F500AA899E /* fmdb */,
 				1885B1D823320E99004F1735 /* CocosLib */,
 				1885B1472331E71F004F1735 /* GHUnit */,
@@ -2574,6 +2486,7 @@
 				C43BA804205AB095006307BE /* Frameworks */,
 				C43BA805205AB095006307BE /* Resources */,
 				6DA0C6CFDCC26655BFD5FDFD /* [CP] Copy Pods Resources */,
+				1818C7B123673BAC00B1548C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2776,18 +2689,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1818C6952366DD8A00B1548C /* ll_aes_ni.c in Sources */,
-				1818C6912366DD8A00B1548C /* ll_hmac.c in Sources */,
 				1885B140232E8E12004F1735 /* LLFpsOscillogramViewController.m in Sources */,
 				1885B1952331E7A1004F1735 /* GHViewTestCase.m in Sources */,
 				89C022D0225CBAC400686898 /* KIFTextInputTraitsOverrides.m in Sources */,
-				1818C68E2366DD8A00B1548C /* ll_ioapi_mem.c in Sources */,
 				C44F414A2152AA7000153F46 /* LLNetworkContentVC.m in Sources */,
 				1885B1962331E7A1004F1735 /* GHUIImageViewControl.m in Sources */,
 				893C712522C1F7E300036E5F /* LLHomeWindow.m in Sources */,
 				18CFB4612308552100F97FB5 /* TestANRViewController.m in Sources */,
 				893799192268250600FDF142 /* WKWebViewVC.m in Sources */,
-				1818C6932366DD8A00B1548C /* ll_fileenc.c in Sources */,
 				89C022E0225CBAC400686898 /* UIScrollView-KIFAdditions.m in Sources */,
 				18D3AF2D22AB98FA00B5A263 /* UICollectionViewCellActions.m in Sources */,
 				C44F41562152AA7000153F46 /* LLSandboxModel.m in Sources */,
@@ -2806,8 +2715,6 @@
 				18BCA223235963EB00AA899E /* LoginScript.m in Sources */,
 				C44F41462152AA7000153F46 /* LLNetworkVC.m in Sources */,
 				C44F41202152AA7000153F46 /* LLScreenshotImageView.m in Sources */,
-				1818C68D2366DD8A00B1548C /* ll_ioapi_buf.c in Sources */,
-				1818C6942366DD8A00B1548C /* ll_sha1.c in Sources */,
 				C44F41582152AA7000153F46 /* LLSandboxVC.m in Sources */,
 				C44F41232152AA7000153F46 /* LLScreenshotActionView.m in Sources */,
 				89256793226577D400E89146 /* LoginVC.m in Sources */,
@@ -2875,7 +2782,6 @@
 				89C022F7225CC25A00686898 /* FindElementTree.m in Sources */,
 				1813584E2341E7250036FC61 /* WKWebView+Swizzling.m in Sources */,
 				18BCA1FD235469A700AA899E /* LLMonkeyListVC.m in Sources */,
-				1818C68B2366DD8A00B1548C /* ll_zip.c in Sources */,
 				1885B1EE23371ADF004F1735 /* IOSUITest.m in Sources */,
 				C44F41312152AA7000153F46 /* LLFilterOtherView.m in Sources */,
 				3629E3922136830A00226C79 /* BaseTestViewController.m in Sources */,
@@ -2909,7 +2815,6 @@
 				C44F41262152AA7000153F46 /* NSString+LL_Utils.m in Sources */,
 				C44F41632152AA7000153F46 /* LLAppHelper.m in Sources */,
 				1885B1752331E794004F1735 /* GHTestOperation.m in Sources */,
-				1818C68F2366DD8A00B1548C /* ll_minishared.c in Sources */,
 				18BCA1F7235469A700AA899E /* LLMockHelper.m in Sources */,
 				18BCA220235963A300AA899E /* MonkeyScript.m in Sources */,
 				89C022D9225CBAC400686898 /* KIFTestActor.m in Sources */,
@@ -2930,7 +2835,6 @@
 				1885B1DE233221FB004F1735 /* CCDriverHelper.m in Sources */,
 				18EE5DC522D443B700CDD712 /* MockViewController.m in Sources */,
 				18B2CC1A230580B300497190 /* LLPingThread.m in Sources */,
-				1818C6892366DD8A00B1548C /* ll_crypt.c in Sources */,
 				18EE5D4E22B7604B00CDD712 /* CoverageOscillogramWindow.m in Sources */,
 				1885B1762331E794004F1735 /* GHTest.m in Sources */,
 				89C022EB225CBAC400686898 /* CALayer-KIFAdditions.m in Sources */,
@@ -2939,12 +2843,10 @@
 				18F9DA30230FD2630081D34A /* LLCrashCPPExceptionHelper.mm in Sources */,
 				89256710225F301900E89146 /* UITabBarActions.m in Sources */,
 				1885B17C2331E794004F1735 /* GHTestCase.m in Sources */,
-				1818C68C2366DD8A00B1548C /* ll_ioapi.c in Sources */,
 				89C022D4225CBAC400686898 /* KIFUITestActor.m in Sources */,
 				1885B1972331E7A1004F1735 /* GHUnitIOSAppDelegate.m in Sources */,
 				18CFB45E2308486B00F97FB5 /* LLANRContentVC.m in Sources */,
 				C44F41242152AA7000153F46 /* LLScreenshotSelectorView.m in Sources */,
-				1818C68A2366DD8A00B1548C /* ll_unzip.c in Sources */,
 				89C022E7225CBAC400686898 /* UITableView-KIFAdditions.m in Sources */,
 				8925670A225ED7AE00E89146 /* BackActions.m in Sources */,
 				89C4A2D022A7B84600D8CD73 /* MonkeyRunner.m in Sources */,
@@ -2956,14 +2858,12 @@
 				89C826C522B288720083AF55 /* UIPickerViewActions.m in Sources */,
 				1813583D2340858F0036FC61 /* LLWebViewHelper.m in Sources */,
 				C44F41422152AA7000153F46 /* LLNetworkModel.m in Sources */,
-				1818C6992366DD8A00B1548C /* SSZipArchive.m in Sources */,
 				8925671B225F71D600E89146 /* FindTopController.m in Sources */,
 				1885B1982331E7A1004F1735 /* GHImageDiffView.m in Sources */,
 				18C0FE572307D3C300B44EA8 /* LLANRCell.m in Sources */,
 				18EE5E5A22D981FC00CDD712 /* UIViewController+Shake.m in Sources */,
 				8925679C2265FACD00E89146 /* UISegmentedControlActions.m in Sources */,
 				1885B1712331E794004F1735 /* GHMockNSHTTPURLResponse.m in Sources */,
-				1818C6922366DD8A00B1548C /* ll_aescrypt.c in Sources */,
 				C44F41342152AA7000153F46 /* LLFilterDateView.m in Sources */,
 				897728C8228C379700E7B223 /* KIFTestActor+Monkey.m in Sources */,
 				C44F411E2152AA7000153F46 /* LLScreenshotView.m in Sources */,
@@ -2971,7 +2871,6 @@
 				18EE5DE422D492EE00CDD712 /* OHHTTPStubsResponse.m in Sources */,
 				18BCA1FA235469A700AA899E /* LLMonkeySettingVC.m in Sources */,
 				89C022F8225CC25A00686898 /* UIView+Tree.m in Sources */,
-				1818C6902366DD8A00B1548C /* ll_aeskey.c in Sources */,
 				18EE5DE322D492EE00CDD712 /* OHHTTPStubsResponse+HTTPMessage.m in Sources */,
 				C44F41332152AA7000153F46 /* LLFilterTextFieldModel.m in Sources */,
 				18EE5D4722B741E200CDD712 /* LLOscillogramViewController.m in Sources */,
@@ -2983,7 +2882,6 @@
 				18135845234199790036FC61 /* LLWebViewContentVC.m in Sources */,
 				18B2CC212307C5C500497190 /* LLANRVC.m in Sources */,
 				893C714322C639A800036E5F /* UITextViewActions.m in Sources */,
-				1818C6962366DD8A00B1548C /* ll_prng.c in Sources */,
 				1885B1992331E7A1004F1735 /* GHUnitIOSTableViewDataSource.m in Sources */,
 				189DFD43232143C300D30C7A /* LLDebugLogger.mm in Sources */,
 				1885B17A2331E794004F1735 /* NSValue+GHValueFormatter.m in Sources */,
@@ -3009,11 +2907,9 @@
 				1885B1722331E794004F1735 /* GHTestRunner.m in Sources */,
 				89C022D6225CBAC400686898 /* KIFUIObject.m in Sources */,
 				3629E3952136830A00226C79 /* TestLogViewController.m in Sources */,
-				1818C6972366DD8A00B1548C /* ll_pwd2key.c in Sources */,
 				1885B1732331E794004F1735 /* GHTesting.m in Sources */,
 				181358482341B0DB0036FC61 /* LLWebViewContentDetailVC.m in Sources */,
 				369D09352153853A001C9D4B /* LLLogCell.m in Sources */,
-				1818C6982366DD8A00B1548C /* ll_aestab.c in Sources */,
 				18BCA21C2359545100AA899E /* MonkeyScriptHelper.m in Sources */,
 				897378DE2293F3D200ECF1EF /* Tree.m in Sources */,
 				C44F41372152AA7000153F46 /* LLFilterTextFieldCell.m in Sources */,
@@ -3306,7 +3202,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PU839N5Z6P;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewLLDebugTool/Frameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -3337,7 +3236,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PU839N5Z6P;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NewLLDebugTool/Frameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
