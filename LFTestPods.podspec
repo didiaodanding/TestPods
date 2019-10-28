@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                = "TestPods"
+  s.name                = "LFTestPods"
   s.version             = "0.0.1"
   s.summary             = "TestPods only for test."
   s.homepage            = "https://github.com/didiaodanding/TestPods.git"
