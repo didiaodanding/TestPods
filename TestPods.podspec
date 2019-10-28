@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
-  s.name                = "NewLLDebugTool"
-  s.version             = "1.3.6"
-  s.summary             = "NewLLDebugTool is a debugging tool for developers and testers that can help you analyze and manipulate data in non-xcode situations."
-  s.homepage            = "https://github.com/didiaodanding/NewLLDebugTool"
+  s.name                = "TestPods"
+  s.version             = "0.0.1"
+  s.summary             = "TestPods only for test."
+  s.homepage            = "https://github.com/didiaodanding/TestPods.git"
   s.license             = "MIT"
   s.author              = { "haleli" => "1404012659@qq.com" }
   s.social_media_url    = "https://github.com/didiaodanding"
   s.platform            = :ios, "8.0"
-  s.source              = { :git => "https://github.com/didiaodanding/NewLLDebugTool.git", :tag => s.version }
+  s.source              = { :git => "https://github.com/didiaodanding/TestPods.git", :tag => s.version }
   s.requires_arc        = true
   s.public_header_files = "NewLLDebugTool/**/*.h"
 #  s.source_files      = "NewLLDebugTool/**/*.{h,m,swift,c}"
