@@ -22,7 +22,7 @@
 //  SOFTWARE.
 
 #import "LLStorageManager.h"
-#import "LLFMDB.h"
+#import <FMDB/FMDB.h>
 #import "NSObject+LL_Utils.h"
 #import "LLTool.h"
 #import "LLConfig.h"
@@ -40,7 +40,7 @@ static NSString *const kDatabaseVersion = @"1";
 
 @interface LLStorageManager ()
 
-@property (strong , nonatomic) LLFMDatabaseQueue * dbQueue;
+@property (strong , nonatomic) FMDatabaseQueue * dbQueue;
 
 @property (strong , nonatomic) dispatch_queue_t queue;
 
@@ -79,7 +79,7 @@ static NSString *const kDatabaseVersion = @"1";
 - (BOOL)registerClass:(Class)cls {
     if (![self isRegisteredClass:cls]) {
         __block BOOL ret = NO;
-        [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+        [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
             NSError *error;
             ret = [db executeUpdate:[self createTableSQLFromClass:cls] values:nil error:&error];
             if (!ret) {
@@ -144,7 +144,7 @@ static NSString *const kDatabaseVersion = @"1";
     }
     
     __block NSMutableArray *modelArray = [[NSMutableArray alloc] init];
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSError *error;
         NSString *SQL = [NSString stringWithFormat:@"SELECT * FROM %@",[self tableNameFromClass:cls]];
         NSArray *values = @[];
@@ -158,7 +158,7 @@ static NSString *const kDatabaseVersion = @"1";
             SQL = [SQL stringByAppendingFormat:@" WHERE %@ = ?",kIdentityColumn];
             values = @[storageIdentity];
         }
-        LLFMResultSet *set = [db executeQuery:SQL values:values error:&error];
+        FMResultSet *set = [db executeQuery:SQL values:values error:&error];
         while ([set next]) {
             NSData *data = [set objectForColumn:kObjectDataColumn];
             id model = [NSKeyedUnarchiver unarchiveObjectWithData:data];
@@ -212,7 +212,7 @@ static NSString *const kDatabaseVersion = @"1";
     // Perform database operations.
     __block BOOL ret = NO;
     
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSError *error;
         NSString *tableName = [self tableNameFromClass:cls];
         NSString *identitiesString = [self convertArrayToSQL:identities.allObjects];
@@ -249,7 +249,7 @@ static NSString *const kDatabaseVersion = @"1";
     // Perform database operations.
     __block BOOL ret = NO;
     
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSError *error;
         NSString *tableName = [self tableNameFromClass:cls];
         ret = [db executeUpdate:[NSString stringWithFormat:@"DELETE FROM %@;",tableName] values:nil error:&error];
@@ -304,8 +304,8 @@ static NSString *const kDatabaseVersion = @"1";
     
     // Perform database operations
     __block NSMutableArray *tables = [[NSMutableArray alloc] init];
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
-        LLFMResultSet *set = [db executeQuery:@"select name from sqlite_master where type='table' order by name;"];
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        FMResultSet *set = [db executeQuery:@"select name from sqlite_master where type='table' order by name;"];
         while ([set next]) {
             NSString *name = [set stringForColumn:@"name"];
             if (name) {
@@ -318,7 +318,7 @@ static NSString *const kDatabaseVersion = @"1";
     __block BOOL ret2 = YES;
     __block BOOL ret3 = YES;
     
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         if ([tables containsObject:@"CrashModelTable"]) {
             ret1 = [db executeUpdate:@"DROP TABLE CrashModelTable"];
         }
@@ -366,7 +366,7 @@ static NSString *const kDatabaseVersion = @"1";
     
     NSString *filePath = [self.folderPath stringByAppendingPathComponent:@"LLDebugTool.db"];
     
-    _dbQueue = [LLFMDatabaseQueue databaseQueueWithPath:filePath];
+    _dbQueue = [FMDatabaseQueue databaseQueueWithPath:filePath];
     
     BOOL ret1 = YES;
     BOOL ret2 = YES;
@@ -437,7 +437,7 @@ static NSString *const kDatabaseVersion = @"1";
 - (BOOL)removeLogModelAndNetworkModelNotIn:(NSArray *)launchDates {
     __block BOOL ret = YES;
     __block BOOL ret2 = YES;
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         if (self.includeLog) {
             NSError *error1;
             NSString *logTableName = [self tableNameFromClass:[self logModelClass]];
@@ -554,7 +554,7 @@ static NSString *const kDatabaseVersion = @"1";
     
     __block NSArray *arguments = @[data,launchDate,identity,model.description?:@"None description"];
     __block BOOL ret = NO;
-    [_dbQueue inDatabase:^(LLFMDatabase * _Nonnull db) {
+    [_dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
         NSError *error;
         if (isSave) {
             ret = [db executeUpdate:[NSString stringWithFormat:@"INSERT INTO %@(%@,%@,%@,%@) VALUES (?,?,?,?);",[self tableNameFromClass:cls],kObjectDataColumn,kLaunchDateColumn,kIdentityColumn,kDescriptionColumn] values:arguments error:&error];

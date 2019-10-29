@@ -1,5 +1,5 @@
 //
-//  LLFMDatabasePool.h
+//  FMDatabasePool.h
 //  fmdb
 //
 //  Created by August Mueller on 6/22/11.
@@ -10,27 +10,27 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class LLFMDatabase;
+@class FMDatabase;
 
-/** Pool of `<LLFMDatabase>` objects.
+/** Pool of `<FMDatabase>` objects.
 
  ### See also
  
- - `<LLFMDatabaseQueue>`
- - `<LLFMDatabase>`
+ - `<FMDatabaseQueue>`
+ - `<FMDatabase>`
 
- @warning Before using `LLFMDatabasePool`, please consider using `<LLFMDatabaseQueue>` instead.
+ @warning Before using `FMDatabasePool`, please consider using `<FMDatabaseQueue>` instead.
 
- If you really really really know what you're doing and `LLFMDatabasePool` is what
+ If you really really really know what you're doing and `FMDatabasePool` is what
  you really really need (ie, you're using a read only database), OK you can use
  it.  But just be careful not to deadlock!
 
  For an example on deadlocking, search for:
- `ONLY_USE_THE_POOL_IF_YOU_ARE_DOING_READS_OTHERWISE_YOULL_DEADLOCK_USE_LLFMDatabaseQUEUE_INSTEAD`
+ `ONLY_USE_THE_POOL_IF_YOU_ARE_DOING_READS_OTHERWISE_YOULL_DEADLOCK_USE_FMDATABASEQUEUE_INSTEAD`
  in the main.m file.
  */
 
-@interface LLFMDatabasePool : NSObject
+@interface FMDatabasePool : NSObject
 
 /** Database path */
 
@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param aPath The file path of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 + (instancetype)databasePoolWithPath:(NSString * _Nullable)aPath;
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param url The file `NSURL` of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 + (instancetype)databasePoolWithURL:(NSURL * _Nullable)url;
@@ -80,7 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param aPath The file path of the database.
  @param openFlags Flags passed to the openWithFlags method of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 + (instancetype)databasePoolWithPath:(NSString * _Nullable)aPath flags:(int)openFlags;
@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param url The file `NSURL` of the database.
  @param openFlags Flags passed to the openWithFlags method of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 + (instancetype)databasePoolWithURL:(NSURL * _Nullable)url flags:(int)openFlags;
@@ -99,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param aPath The file path of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithPath:(NSString * _Nullable)aPath;
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param url The file `NSURL of the database.
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithURL:(NSURL * _Nullable)url;
@@ -118,7 +118,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param aPath The file path of the database.
  @param openFlags Flags passed to the openWithFlags method of the database
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithPath:(NSString * _Nullable)aPath flags:(int)openFlags;
@@ -128,7 +128,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param url The file `NSURL` of the database.
  @param openFlags Flags passed to the openWithFlags method of the database
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithURL:(NSURL * _Nullable)url flags:(int)openFlags;
@@ -139,7 +139,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param openFlags Flags passed to the openWithFlags method of the database
  @param vfsName The name of a custom virtual file system
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithPath:(NSString * _Nullable)aPath flags:(int)openFlags vfs:(NSString * _Nullable)vfsName;
@@ -150,16 +150,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param openFlags Flags passed to the openWithFlags method of the database
  @param vfsName The name of a custom virtual file system
  
- @return The `LLFMDatabasePool` object. `nil` on error.
+ @return The `FMDatabasePool` object. `nil` on error.
  */
 
 - (instancetype)initWithURL:(NSURL * _Nullable)url flags:(int)openFlags vfs:(NSString * _Nullable)vfsName;
 
-/** Returns the Class of 'LLFMDatabase' subclass, that will be used to instantiate database object.
+/** Returns the Class of 'FMDatabase' subclass, that will be used to instantiate database object.
 
- Subclasses can override this method to return specified Class of 'LLFMDatabase' subclass.
+ Subclasses can override this method to return specified Class of 'FMDatabase' subclass.
 
- @return The Class of 'LLFMDatabase' subclass, that will be used to instantiate database object.
+ @return The Class of 'FMDatabase' subclass, that will be used to instantiate database object.
  */
 
 + (Class)databaseClass;
@@ -193,14 +193,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Synchronously perform database operations in pool.
 
- @param block The code to be run on the `LLFMDatabasePool` pool.
+ @param block The code to be run on the `FMDatabasePool` pool.
  */
 
-- (void)inDatabase:(__attribute__((noescape)) void (^)(LLFMDatabase *db))block;
+- (void)inDatabase:(__attribute__((noescape)) void (^)(FMDatabase *db))block;
 
 /** Synchronously perform database operations in pool using transaction.
  
- @param block The code to be run on the `LLFMDatabasePool` pool.
+ @param block The code to be run on the `FMDatabasePool` pool.
  
  @warning   Unlike SQLite's `BEGIN TRANSACTION`, this method currently performs
             an exclusive transaction, not a deferred transaction. This behavior
@@ -211,69 +211,69 @@ NS_ASSUME_NONNULL_BEGIN
             to make your intent explicit, but also to future-proof your code.
   */
 
-- (void)inTransaction:(__attribute__((noescape)) void (^)(LLFMDatabase *db, BOOL *rollback))block;
+- (void)inTransaction:(__attribute__((noescape)) void (^)(FMDatabase *db, BOOL *rollback))block;
 
 /** Synchronously perform database operations in pool using exclusive transaction.
  
- @param block The code to be run on the `LLFMDatabasePool` pool.
+ @param block The code to be run on the `FMDatabasePool` pool.
  */
 
-- (void)inExclusiveTransaction:(__attribute__((noescape)) void (^)(LLFMDatabase *db, BOOL *rollback))block;
+- (void)inExclusiveTransaction:(__attribute__((noescape)) void (^)(FMDatabase *db, BOOL *rollback))block;
 
 /** Synchronously perform database operations in pool using deferred transaction.
 
- @param block The code to be run on the `LLFMDatabasePool` pool.
+ @param block The code to be run on the `FMDatabasePool` pool.
  */
 
-- (void)inDeferredTransaction:(__attribute__((noescape)) void (^)(LLFMDatabase *db, BOOL *rollback))block;
+- (void)inDeferredTransaction:(__attribute__((noescape)) void (^)(FMDatabase *db, BOOL *rollback))block;
 
 /** Synchronously perform database operations on queue, using immediate transactions.
 
- @param block The code to be run on the queue of `LLFMDatabaseQueue`
+ @param block The code to be run on the queue of `FMDatabaseQueue`
  */
 
-- (void)inImmediateTransaction:(__attribute__((noescape)) void (^)(LLFMDatabase *db, BOOL *rollback))block;
+- (void)inImmediateTransaction:(__attribute__((noescape)) void (^)(FMDatabase *db, BOOL *rollback))block;
 
 /** Synchronously perform database operations in pool using save point.
 
- @param block The code to be run on the `LLFMDatabasePool` pool.
+ @param block The code to be run on the `FMDatabasePool` pool.
  
  @return `NSError` object if error; `nil` if successful.
 
- @warning You can not nest these, since calling it will pull another database out of the pool and you'll get a deadlock. If you need to nest, use `<[LLFMDatabase startSavePointWithName:error:]>` instead.
+ @warning You can not nest these, since calling it will pull another database out of the pool and you'll get a deadlock. If you need to nest, use `<[FMDatabase startSavePointWithName:error:]>` instead.
 */
 
-- (NSError * _Nullable)inSavePoint:(__attribute__((noescape)) void (^)(LLFMDatabase *db, BOOL *rollback))block;
+- (NSError * _Nullable)inSavePoint:(__attribute__((noescape)) void (^)(FMDatabase *db, BOOL *rollback))block;
 
 @end
 
 
-/** LLFMDatabasePool delegate category
+/** FMDatabasePool delegate category
  
- This is a category that defines the protocol for the LLFMDatabasePool delegate
+ This is a category that defines the protocol for the FMDatabasePool delegate
  */
 
-@interface NSObject (LLFMDatabasePoolDelegate)
+@interface NSObject (FMDatabasePoolDelegate)
 
 /** Asks the delegate whether database should be added to the pool. 
  
- @param pool     The `LLFMDatabasePool` object.
- @param database The `LLFMDatabase` object.
+ @param pool     The `FMDatabasePool` object.
+ @param database The `FMDatabase` object.
  
  @return `YES` if it should add database to pool; `NO` if not.
  
  */
 
-- (BOOL)databasePool:(LLFMDatabasePool*)pool shouldAddDatabaseToPool:(LLFMDatabase*)database;
+- (BOOL)databasePool:(FMDatabasePool*)pool shouldAddDatabaseToPool:(FMDatabase*)database;
 
 /** Tells the delegate that database was added to the pool.
  
- @param pool     The `LLFMDatabasePool` object.
- @param database The `LLFMDatabase` object.
+ @param pool     The `FMDatabasePool` object.
+ @param database The `FMDatabase` object.
 
  */
 
-- (void)databasePool:(LLFMDatabasePool*)pool didAddDatabase:(LLFMDatabase*)database;
+- (void)databasePool:(FMDatabasePool*)pool didAddDatabase:(FMDatabase*)database;
 
 @end
 

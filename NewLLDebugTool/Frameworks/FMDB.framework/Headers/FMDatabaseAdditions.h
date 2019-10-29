@@ -1,5 +1,5 @@
 //
-//  LLFMDatabaseAdditions.h
+//  FMDatabaseAdditions.h
 //  fmdb
 //
 //  Created by August Mueller on 10/30/05.
@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LLFMDatabase.h"
+#import "FMDatabase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** Category of additions for `<LLFMDatabase>` class.
+/** Category of additions for `<FMDatabase>` class.
  
  ### See also
 
- - `<LLFMDatabase>`
+ - `<FMDatabase>`
  */
 
-@interface LLFMDatabase (LLFMDatabaseAdditions)
+@interface FMDatabase (FMDatabaseAdditions)
 
 ///----------------------------------------
 /// @name Return results of SQL to variable
@@ -137,12 +137,12 @@ NS_ASSUME_NONNULL_BEGIN
  - `rootpage` - The page number of the root b-tree page for tables and indices
  - `sql` - The SQL that created the entity
 
- @return `LLFMResultSet` of schema; `nil` on error.
+ @return `FMResultSet` of schema; `nil` on error.
  
  @see [SQLite File Format](http://www.sqlite.org/fileformat.html)
  */
 
-- (LLFMResultSet * _Nullable)getSchema;
+- (FMResultSet * _Nullable)getSchema;
 
 /** The schema of the database.
 
@@ -161,12 +161,12 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param tableName The name of the table for whom the schema will be returned.
  
- @return `LLFMResultSet` of schema; `nil` on error.
+ @return `FMResultSet` of schema; `nil` on error.
  
  @see [table_info](http://www.sqlite.org/pragma.html#pragma_table_info)
  */
 
-- (LLFMResultSet * _Nullable)getTableSchema:(NSString*)tableName;
+- (FMResultSet * _Nullable)getTableSchema:(NSString*)tableName;
 
 /** Test to see if particular column exists for particular table in database
  

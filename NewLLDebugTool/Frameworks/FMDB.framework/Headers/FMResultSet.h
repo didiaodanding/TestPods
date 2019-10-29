@@ -14,19 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 #endif
 #endif
 
-@class LLFMDatabase;
+@class FMDatabase;
 @class FMStatement;
 
-/** Represents the results of executing a query on an `<LLFMDatabase>`.
+/** Represents the results of executing a query on an `<FMDatabase>`.
  
  ### See also
  
- - `<LLFMDatabase>`
+ - `<FMDatabase>`
  */
 
-@interface LLFMResultSet : NSObject
+@interface FMResultSet : NSObject
 
-@property (nonatomic, retain, nullable) LLFMDatabase *parentDB;
+@property (nonatomic, retain, nullable) FMDatabase *parentDB;
 
 ///-----------------
 /// @name Properties
@@ -52,12 +52,12 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param statement A `<FMStatement>` to be performed
  
- @param aDB A `<LLFMDatabase>` to be used
+ @param aDB A `<FMDatabase>` to be used
  
- @return A `LLFMResultSet` on success; `nil` on failure
+ @return A `FMResultSet` on success; `nil` on failure
  */
 
-+ (instancetype)resultSetWithStatement:(FMStatement *)statement usingParentDatabase:(LLFMDatabase*)aDB;
++ (instancetype)resultSetWithStatement:(FMStatement *)statement usingParentDatabase:(FMDatabase*)aDB;
 
 /** Close result set */
 
