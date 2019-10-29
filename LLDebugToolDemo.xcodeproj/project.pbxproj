@@ -99,9 +99,8 @@
 		18CFB467230AD73300F97FB5 /* LLCrashMachHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFB466230AD73300F97FB5 /* LLCrashMachHelper.m */; };
 		18D3AF2A22AB908F00B5A263 /* UITableViewCellActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3AF2922AB908F00B5A263 /* UITableViewCellActions.m */; };
 		18D3AF2D22AB98FA00B5A263 /* UICollectionViewCellActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3AF2C22AB98FA00B5A263 /* UICollectionViewCellActions.m */; };
-		18E6BABB2367E9C300E69FDA /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BABA2367E9C300E69FDA /* FMDB.framework */; };
-		18E6BABC2367EA9700E69FDA /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BABA2367E9C300E69FDA /* FMDB.framework */; };
-		18E6BABD2367EA9700E69FDA /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BABA2367E9C300E69FDA /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E6BABF2367F7B300E69FDA /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BABE2367F7B300E69FDA /* FMDB.framework */; };
+		18E6BAC12367F7BC00E69FDA /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BABE2367F7B300E69FDA /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18EE5D3C22B48C7700CDD712 /* UIView+ViewCoverage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D3B22B48C7700CDD712 /* UIView+ViewCoverage.m */; };
 		18EE5D4422B73D7800CDD712 /* LLOscillogramWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D4322B73D7800CDD712 /* LLOscillogramWindow.m */; };
 		18EE5D4722B741E200CDD712 /* LLOscillogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D4622B741E200CDD712 /* LLOscillogramViewController.m */; };
@@ -333,7 +332,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1818C7C523674D3A00B1548C /* ZipArchive.framework in Embed Frameworks */,
-				18E6BABD2367EA9700E69FDA /* FMDB.framework in Embed Frameworks */,
+				18E6BAC12367F7BC00E69FDA /* FMDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +519,7 @@
 		18D3AF2922AB908F00B5A263 /* UITableViewCellActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellActions.m; sourceTree = "<group>"; };
 		18D3AF2B22AB98FA00B5A263 /* UICollectionViewCellActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCellActions.h; sourceTree = "<group>"; };
 		18D3AF2C22AB98FA00B5A263 /* UICollectionViewCellActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewCellActions.m; sourceTree = "<group>"; };
-		18E6BABA2367E9C300E69FDA /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
+		18E6BABE2367F7B300E69FDA /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
 		18EE5D3A22B48C7700CDD712 /* UIView+ViewCoverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewCoverage.h"; sourceTree = "<group>"; };
 		18EE5D3B22B48C7700CDD712 /* UIView+ViewCoverage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewCoverage.m"; sourceTree = "<group>"; };
 		18EE5D4222B73D7800CDD712 /* LLOscillogramWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLOscillogramWindow.h; sourceTree = "<group>"; };
@@ -955,10 +954,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1818C7C323674D1700B1548C /* ZipArchive.framework in Frameworks */,
-				18E6BABC2367EA9700E69FDA /* FMDB.framework in Frameworks */,
 				891414F82222A18000974B52 /* IOKit.framework in Frameworks */,
-				18E6BABB2367E9C300E69FDA /* FMDB.framework in Frameworks */,
 				208678B3E17E2AAB3B0E945F /* libPods-LLDebugToolDemo.a in Frameworks */,
+				18E6BABF2367F7B300E69FDA /* FMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,7 +985,7 @@
 		1818C7AC2367395F00B1548C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18E6BABA2367E9C300E69FDA /* FMDB.framework */,
+				18E6BABE2367F7B300E69FDA /* FMDB.framework */,
 				1818C7C223674D1700B1548C /* ZipArchive.framework */,
 			);
 			path = Frameworks;
