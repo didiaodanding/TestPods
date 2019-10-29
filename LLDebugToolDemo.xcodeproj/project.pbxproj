@@ -17,8 +17,6 @@
 		1813584B2341B4FA0036FC61 /* LLWebViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584A2341B4FA0036FC61 /* LLWebViewConfig.m */; };
 		1813584E2341E7250036FC61 /* WKWebView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */; };
 		18135851234214AA0036FC61 /* WKWebViewDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */; };
-		1818C7C323674D1700B1548C /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7C223674D1700B1548C /* ZipArchive.framework */; };
-		1818C7C523674D3A00B1548C /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1818C7C223674D1700B1548C /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1885B13A232E6F0C004F1735 /* LLOscillogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B139232E6F0C004F1735 /* LLOscillogramView.m */; };
 		1885B13D232E8D58004F1735 /* LLFpsOscillogramWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13C232E8D58004F1735 /* LLFpsOscillogramWindow.m */; };
 		1885B140232E8E12004F1735 /* LLFpsOscillogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885B13F232E8E12004F1735 /* LLFpsOscillogramViewController.m */; };
@@ -99,8 +97,10 @@
 		18CFB467230AD73300F97FB5 /* LLCrashMachHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CFB466230AD73300F97FB5 /* LLCrashMachHelper.m */; };
 		18D3AF2A22AB908F00B5A263 /* UITableViewCellActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3AF2922AB908F00B5A263 /* UITableViewCellActions.m */; };
 		18D3AF2D22AB98FA00B5A263 /* UICollectionViewCellActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3AF2C22AB98FA00B5A263 /* UICollectionViewCellActions.m */; };
-		18E6BAC72367FF5B00E69FDA /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BAC62367FF5B00E69FDA /* FMDB.framework */; };
-		18E6BAC92367FF6400E69FDA /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BAC62367FF5B00E69FDA /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E6BAD12368237B00E69FDA /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BACF2368237B00E69FDA /* ZipArchive.framework */; };
+		18E6BAD22368237B00E69FDA /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BAD02368237B00E69FDA /* FMDB.framework */; };
+		18E6BAD42368239200E69FDA /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BAD02368237B00E69FDA /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E6BAD62368239200E69FDA /* ZipArchive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E6BACF2368237B00E69FDA /* ZipArchive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18EE5D3C22B48C7700CDD712 /* UIView+ViewCoverage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D3B22B48C7700CDD712 /* UIView+ViewCoverage.m */; };
 		18EE5D4422B73D7800CDD712 /* LLOscillogramWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D4322B73D7800CDD712 /* LLOscillogramWindow.m */; };
 		18EE5D4722B741E200CDD712 /* LLOscillogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5D4622B741E200CDD712 /* LLOscillogramViewController.m */; };
@@ -331,8 +331,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1818C7C523674D3A00B1548C /* ZipArchive.framework in Embed Frameworks */,
-				18E6BAC92367FF6400E69FDA /* FMDB.framework in Embed Frameworks */,
+				18E6BAD42368239200E69FDA /* FMDB.framework in Embed Frameworks */,
+				18E6BAD62368239200E69FDA /* ZipArchive.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +360,6 @@
 		1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Swizzling.m"; sourceTree = "<group>"; };
 		1813584F234214AA0036FC61 /* WKWebViewDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDelegateVC.h; sourceTree = "<group>"; };
 		18135850234214AA0036FC61 /* WKWebViewDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDelegateVC.m; sourceTree = "<group>"; };
-		1818C7C223674D1700B1548C /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
 		1885B138232E6F0C004F1735 /* LLOscillogramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLOscillogramView.h; sourceTree = "<group>"; };
 		1885B139232E6F0C004F1735 /* LLOscillogramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLOscillogramView.m; sourceTree = "<group>"; };
 		1885B13B232E8D58004F1735 /* LLFpsOscillogramWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLFpsOscillogramWindow.h; sourceTree = "<group>"; };
@@ -519,7 +518,8 @@
 		18D3AF2922AB908F00B5A263 /* UITableViewCellActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellActions.m; sourceTree = "<group>"; };
 		18D3AF2B22AB98FA00B5A263 /* UICollectionViewCellActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewCellActions.h; sourceTree = "<group>"; };
 		18D3AF2C22AB98FA00B5A263 /* UICollectionViewCellActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewCellActions.m; sourceTree = "<group>"; };
-		18E6BAC62367FF5B00E69FDA /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
+		18E6BACF2368237B00E69FDA /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
+		18E6BAD02368237B00E69FDA /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
 		18EE5D3A22B48C7700CDD712 /* UIView+ViewCoverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewCoverage.h"; sourceTree = "<group>"; };
 		18EE5D3B22B48C7700CDD712 /* UIView+ViewCoverage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewCoverage.m"; sourceTree = "<group>"; };
 		18EE5D4222B73D7800CDD712 /* LLOscillogramWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLOscillogramWindow.h; sourceTree = "<group>"; };
@@ -953,10 +953,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1818C7C323674D1700B1548C /* ZipArchive.framework in Frameworks */,
+				18E6BAD12368237B00E69FDA /* ZipArchive.framework in Frameworks */,
 				891414F82222A18000974B52 /* IOKit.framework in Frameworks */,
 				208678B3E17E2AAB3B0E945F /* libPods-LLDebugToolDemo.a in Frameworks */,
-				18E6BAC72367FF5B00E69FDA /* FMDB.framework in Frameworks */,
+				18E6BAD22368237B00E69FDA /* FMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,15 +980,6 @@
 				1813584D2341E7250036FC61 /* WKWebView+Swizzling.m */,
 			);
 			path = Function;
-			sourceTree = "<group>";
-		};
-		1818C7AC2367395F00B1548C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				18E6BAC62367FF5B00E69FDA /* FMDB.framework */,
-				1818C7C223674D1700B1548C /* ZipArchive.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		1885B1472331E71F004F1735 /* GHUnit */ = {
@@ -1282,6 +1273,15 @@
 				18BCA222235963EB00AA899E /* LoginScript.m */,
 			);
 			path = MonkeyScript;
+			sourceTree = "<group>";
+		};
+		18E6BACE2368236500E69FDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18E6BAD02368237B00E69FDA /* FMDB.framework */,
+				18E6BACF2368237B00E69FDA /* ZipArchive.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		18EE5D3922B48C0100CDD712 /* coverage */ = {
@@ -1815,6 +1815,7 @@
 		C43BA7FE205AB095006307BE = {
 			isa = PBXGroup;
 			children = (
+				18E6BACE2368236500E69FDA /* Frameworks */,
 				18BCA21D2359634800AA899E /* MonkeyScript */,
 				1885B1D22331FCDA004F1735 /* Tests */,
 				C44F40542152AA7000153F46 /* NewLLDebugTool */,
@@ -1867,7 +1868,6 @@
 		C44F40542152AA7000153F46 /* NewLLDebugTool */ = {
 			isa = PBXGroup;
 			children = (
-				1818C7AC2367395F00B1548C /* Frameworks */,
 				1885B1D823320E99004F1735 /* CocosLib */,
 				1885B1472331E71F004F1735 /* GHUnit */,
 				189DFD402321436800D30C7A /* Logger */,
@@ -3169,6 +3169,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NewLLDebugTool/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -3203,6 +3204,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NewLLDebugTool/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
