@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 #  s.source_files      = "NewLLDebugTool/**/*.{h,m,swift,c}"
   s.source_files	    = "NewLLDebugTool/**/*.{h,m,mm}"
   s.resources		    = "NewLLDebugTool/**/*.{xib,storyboard,bundle,js}"
-  s.vendored_frameworks = 'NewLLDebugTool/Frameworks/*.framework'
+  s.vendored_frameworks = 'Frameworks/*.framework'
   #s.swift_version = "4.2"
 
   # s.xcconfig = {
